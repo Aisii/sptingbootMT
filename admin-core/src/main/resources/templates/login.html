@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>秒推</title>
+    <link rel="stylesheet" href="${ctxPath}/plugins/layui/css/layui.css">
+    <script src="${ctxPath}/plugins/layui/layui.js"></script>
+
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style rel="stylesheet" type="text/css">
+        .layui-tab-title li:first-child > i {
+            display: none;
+        }
+
+        .layui-input {
+            width: 200px;
+        }
+
+        body {
+            background-image: url("http://img.zcool.cn/community/0117e2571b8b246ac72538120dd8a4.jpg@1280w_1l_2o_100sh.jpg");
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        .main {
+            text-align: center; /*让div内部文字居中*/
+            background-color: #fff;
+            border-radius: 20px;
+            width: 400px;
+            height: 300px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body class="layui-layout-body">
+<div class="main">
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+        <legend>用户登录</legend>
+    </fieldset>
+
+    <form class="layui-form" action="${ctxPath}/login.do" method="post">
+        <div class="layui-form-item">
+            <label class="layui-form-label">用户名</label>
+            <div class="layui-input-block">
+                <input type="text" name="code" lay-verify="title" autocomplete="off"
+                       placeholder="请输入用户名" class="layui-input" value="admin">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">密码</label>
+            <div class="layui-input-block">
+                <input type="password" name="password" lay-verify="required" name="" placeholder="请输入密码"
+                       autocomplete="off"
+                       class="layui-input" value="123456">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <button class="layui-btn" lay-submit="" lay-filter="demo1">立即登录</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

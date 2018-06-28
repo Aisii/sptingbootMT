@@ -1,0 +1,25 @@
+<!--#layout("/common/layout.html",{"jsBase":"/js/admin/user/"}){ -->
+<layui:searchForm formId="searchForm"  condition="${search}">
+</layui:searchForm>
+
+  <div class="layui-btn-group">
+  	<layui:accessButton function="duser.add"  action="add">增加</layui:accessButton>
+  	<layui:accessButton function="duser.edit"  action="edit">编辑</layui:accessButton>
+  	<layui:accessButton function="duser.del"  action="del">删除</layui:accessButton>
+  <!--	<layui:accessButton function="duser.role"  action="userRole">操作角色</layui:accessButton>
+  	<layui:accessButton function="duser.role"  action="userRole">流程角色</layui:accessButton>-->
+  	<layui:accessButton function="duser.password"  action="changePassword">修改密码</layui:accessButton>
+  	<!--<layui:accessButton function="duser.export"  action="exportUsers">导出Excel</layui:accessButton>-->
+  	
+      
+  </div>
+<table id="userTable" lay-filter="userTable"></table>
+<!--#} -->
+<script>
+
+layui.use(['index'], function(){
+  var index = layui.index
+  index.init();
+});
+
+</script>
